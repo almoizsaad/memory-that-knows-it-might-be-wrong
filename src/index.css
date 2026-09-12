@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 227 20% 8%;
+    --foreground: 220 24% 94%;
+    --card: 224 20% 11%;
+    --card-foreground: 220 24% 94%;
+
+    --primary: 176 56% 42%;
+    --primary-foreground: 227 20% 8%;
+
+    --secondary: 224 18% 17%;
+    --secondary-foreground: 220 24% 94%;
+
+    --muted: 224 16% 15%;
+    --muted-foreground: 220 12% 63%;
+
+    --accent: 176 56% 42%;
+    --accent-foreground: 227 20% 8%;
+
+    --destructive: 2 71% 63%;
+    --destructive-foreground: 227 20% 8%;
+
+    --border: 224 16% 20%;
+    --input: 224 16% 20%;
+    --ring: 176 56% 42%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-ink-50 antialiased;
+    font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    background-color: #0D0F14;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(47, 168, 160, 0.06), transparent 40%),
+      radial-gradient(circle at 88% 92%, rgba(91, 141, 239, 0.05), transparent 45%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 600;
+    color: #EDEEF2;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  code, pre, .font-data {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #333A48;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4A5263;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #333A48 transparent;
+  }
+
+  :focus-visible {
+    outline: 2px solid #2FA8A0;
+    outline-offset: 2px;
+  }
+}
