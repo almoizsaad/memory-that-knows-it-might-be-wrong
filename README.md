@@ -4,6 +4,8 @@ A memory layer for agents that tags every fact with **source, confidence,
 freshness, and scope** — and knows when to hedge, ask, or forget instead of
 answering with false confidence.
 
+> **Live demo:**[https://memory-engine-kappa.vercel.app/](https://memory-engine-kappa.vercel.app/)
+
 Built for the *"Memory That Knows It Might Be Wrong"* challenge. See
 `ARCHITECTURE.md` for the design, `FAILURE_TESTS.md` for the four required
 failure cases with real transcripts, `THESIS.md` for the two-year bet, and
